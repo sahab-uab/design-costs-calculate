@@ -1,5 +1,3 @@
-import "./calculator";
-
 // show extention
 window.addEventListener("DOMContentLoaded", function () {
   // get extentions wraper

@@ -1,9 +1,23 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
+
+header('Content-Type: application/json');
+
+$input = json_decode(file_get_contents('php://input'), true);
+
+if (!isset($input['address']) || !filter_var($input['address'], FILTER_VALIDATE_EMAIL)) {
+    echo json_encode(['status' => 'error', 'message' => 'Invalid email address']);
+    exit;
+}
+
+if (!isset($input['html']) || empty($input['html'])) {
+    echo json_encode(['status' => 'error', 'message' => 'HTML content is required']);
+    exit;
+}
 
 $mail = new PHPMailer(true);
 
@@ -19,16 +33,16 @@ try {
 
     //Recipients
     $mail->setFrom('sahabuab@gmail.com', 'Mailer');
-    $mail->addAddress('sahabuab@gmail.com', 'Joe User'); 
+    $mail->addAddress($input['address']);
 
     // Content
     $mail->isHTML(true);                                        // Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'Your Building Quote';
+    $mail->Body    = $input['html'];
+    $mail->AltBody = strip_tags($input['html']);
 
     $mail->send();
-    echo 'Message has been sent';
+    echo json_encode(['status' => 'success', 'message' => 'Message has been sent']);
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo json_encode(['status' => 'error', 'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"]);
 }

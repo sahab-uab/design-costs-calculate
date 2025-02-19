@@ -340,7 +340,79 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // send mail
-        
+        const FName = document.getElementById("firstName");
+        const LName = document.getElementById("lastName");
+        const address = document.getElementById("address");
+        const postCode = document.getElementById("postCode");
+        const email = document.getElementById("email");
+        const phone = document.getElementById("phone");
+
+        if (FName.value == "") {
+          FName.style.borderColor = "red";
+          return;
+        } else {
+          FName.removeAttribute("style");
+        }
+        if (LName.value == "") {
+          LName.style.borderColor = "red";
+          return;
+        } else {
+          LName.removeAttribute("style");
+        }
+        if (address.value == "") {
+          address.style.borderColor = "red";
+          return;
+        } else {
+          address.removeAttribute("style");
+        }
+        if (postCode.value == "") {
+          postCode.style.borderColor = "red";
+          return;
+        } else {
+          postCode.removeAttribute("style");
+        }
+        if (email.value == "") {
+          email.style.borderColor = "red";
+          return;
+        } else {
+          email.removeAttribute("style");
+        }
+        if (phone.value == "") {
+          phone.style.borderColor = "red";
+          return;
+        } else {
+          phone.removeAttribute("style");
+        }
+
+        let mailUrl = `${window.location.origin}/calculator/mail/index.php`;
+        let mailHtml = `
+        <p>Hi ${FName.value} ${LName.value},</p><br/>
+        <p>Thank you for using our quoting tool for your building needs.</p><br/>
+        <p>A copy of your submission can be found below:</p><br/>
+          ${itemsBox.innerHTML}
+          <br/>
+        <p>We will try to contact you in the near future to further discuss your quote and to gain a more accurate understanding between both parties.</p><br/>
+        <p>Thanks</p>
+        `;
+        let emailData = {
+          address: email.value,
+          html: mailHtml,
+        };
+
+        fetch(mailUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(emailData),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            isValidate(false, "", error);
+          });
       } else {
         pricesBox.classList.add("hidden");
         controllerBox.classList.remove("hidden");
