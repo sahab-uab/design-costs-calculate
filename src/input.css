@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+  }
+  input[type="radio"]:checked + span {
+    display: block;
+  }
+
+  .toggle__dot {
+    top: 2px;
+    left: 3.5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  input:checked ~ .toggle__dot {
+    transform: translateX(100%);
+    left: 5px;
+    @apply bg-yellow-400;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+@layer components {
+  .customeInput {
+    @apply outline-none border border-gray-200 rounded-md h-10 py-2 w-full flex items-center px-3 duration-300 focus:border-yellow-400;
+  }
+}

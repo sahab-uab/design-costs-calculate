@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- required meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desing calculator</title>
+
+    <!-- style -->
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <!-- toster -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body
+    class="bg-yellow-50 relative before:absolute before:w-full before:h-[500px] overflow-hidden overflow-y-auto before:bg-blue-100 before:rounded-b-full before:z-[-1] after:absolute after:w-screen after:h-screen after:bg-white after:bg-opacity-5 after:inset-0 after:z-[-1] z-[1] after:backdrop-blur-3xl"
+  >
+    <!-- header -->
+    <header class="container">
+      <!-- navbar -->
+      <div class="py-7 flex items-center justify-between">
+        <h1 class="font-bold text-2xl text-gray-950">Logo.</h1>
+        <a href="" class="text-gray-950 text-[14px] uppercase font-medium"
+          >Home</a
+        >
+      </div>
+
+      <!-- banner -->
+      <div class="py-10 text-center lg:px-40">
+        <h1 class="text-4xl md:text-5xl font-bold">
+          Calculate your design costs
+        </h1>
+        <p class="text-[16px] mt-3 leading-6 font-medium">
+          Get an instant price estimate on architectural drawings and planning
+          support from the highest-rated practice on Trustpilot. Don't worry,
+          it's free.
+        </p>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- calculator -->
+    <section class="my-6 container">
+      <form>
+        <div class="bg-white p-10 rounded-lg shadow-sm border border-gray-50">
+          <!-- =============== -->
+          <h1 class="text-[20px] font-medium text-blue-950 mb-3">
+            What sort of property is this?
+          </h1>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"
+          >
+            <label
+              for="Detached"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Detached</span
+              >
+              <input
+                type="radio"
+                name="property"
+                id="Detached"
+                value="Detached"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="Semi_Detached"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Semi Detached</span
+              >
+              <input
+                type="radio"
+                name="property"
+                id="Semi_Detached"
+                value="Semi Detached"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="Terrace"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Terrace</span
+              >
+              <input
+                type="radio"
+                name="property"
+                id="Terrace"
+                value="Terrace"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="Flat"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Flat</span
+              >
+              <input
+                type="radio"
+                name="property"
+                id="Flat"
+                value="Flat"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="Bungalow"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Bungalow</span
+              >
+              <input
+                type="radio"
+                name="property"
+                id="Bungalow"
+                value="Bungalow"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <!-- =========== -->
+          <h1 class="text-[20px] font-medium text-blue-950 mb-3 mt-10">
+            What kind of project would you like?*
+          </h1>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <label
+              for="Interior_Works"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Interior Works</span
+              >
+              <input
+                type="radio"
+                name="project"
+                id="Interior_Works"
+                value="Interior Works"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="Extension"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Extension</span
+              >
+              <input
+                type="radio"
+                name="project"
+                id="Extension"
+                value="Extension"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="Interior___Extension"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Interior + Extension</span
+              >
+              <input
+                type="radio"
+                name="project"
+                id="Interior___Extension"
+                value="Interior + Extension"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <!-- ========== -->
+          <div
+            class="p-6 border border-gray-200 rounded-md mb-3 mt-10 overflow-hidden duration-500 hidden"
+            id="extentions"
+          >
+            <h1 class="text-[20px] font-medium text-blue-950">
+              What areas do you need your project to cover?
+            </h1>
+            <p class="text-[14px] text-blue-950 mb-3">
+              Use the boxes to tick which areas you'd like.
+            </p>
+
+            <!--  -->
+            <div class="mt-4">
+              <label
+                for="groundFloor"
+                class="flex gap-x-5 items-center cursor-pointer mb-4 mt-3"
+              >
+                <div class="relative">
+                  <input
+                    id="groundFloor"
+                    type="checkbox"
+                    class="hidden extentiosToggler"
+                  />
+                  <div
+                    class="toggle__line w-12 h-5 bg-yellow-100 rounded-full shadow-inner"
+                  ></div>
+                  <div
+                    class="toggle__dot absolute w-5 h-5 bg-gray-200 rounded-full shadow inset-y-0 left-0"
+                  ></div>
+                </div>
+                <span>Ground Floor Extension</span>
+              </label>
+              <div id="groundFloorSettings" class="hidden">
+                <select name="ggroundFloorSettingsSelcet" class="customeInput">
+                  <option value="Side Extension">Side Extension</option>
+                  <option value="Rear Extension">Rear Extension</option>
+                  <option value="Side + Rear Extension">
+                    Side + Rear Extension
+                  </option>
+                </select>
+
+                <h1 class="text-[18px] font-medium text-blue-950 mt-10">
+                  How much additional space do you need?
+                </h1>
+                <p class="text-[14px] text-blue-950 mb-3">Ground Floor Space</p>
+                <div class="flex items-center gap-x-2">
+                  <button
+                    type="button"
+                    id="downCounter"
+                    class="min-w-[30px] h-[30px] rounded-full flex items-center justify-center text-gray-400 text-[15px] border border-gray-300"
+                  >
+                    -
+                  </button>
+                  <div
+                    class="flex items-center border border-gray-200 px-3 rounded-md h-10"
+                  >
+                    <input
+                      type="number"
+                      value="0"
+                      id="extentionsSquar"
+                      class="bg-transparent outline-none w-[80%] md:w-[80px]"
+                    />
+                    <span>m <sup>2</sup></span>
+                  </div>
+                  <button
+                    type="button"
+                    id="upCounter"
+                    class="min-w-[30px] h-[30px] rounded-full flex items-center justify-center text-gray-400 text-[15px] border border-gray-300"
+                  >
+                    +
+                  </button>
+                </div>
+                <h1 class="text-[18px] font-medium text-blue-950 mt-5 mb-3">
+                  Some extra information
+                </h1>
+                <input type="text" id="extraInfo" class="customeInput" />
+              </div>
+            </div>
+            <!--  -->
+            <div class="mt-4">
+              <label
+                for="twoStorey"
+                class="flex gap-x-5 items-center cursor-pointer mb-4 mt-3"
+              >
+                <div class="relative">
+                  <input
+                    id="twoStorey"
+                    type="checkbox"
+                    class="hidden extentiosToggler"
+                  />
+                  <div
+                    class="toggle__line w-12 h-5 bg-yellow-100 rounded-full shadow-inner"
+                  ></div>
+                  <div
+                    class="toggle__dot absolute w-5 h-5 bg-gray-200 rounded-full shadow inset-y-0 left-0"
+                  ></div>
+                </div>
+                <span>Two-Storey Extension</span>
+              </label>
+              <div id="twoStoreySettings" class="hidden">
+                <select name="" class="customeInput">
+                  <option value="Side Extension">Side Extension</option>
+                  <option value="Rear Extension">Rear Extension</option>
+                  <option value="Side + Rear Extension">
+                    Side + Rear Extension
+                  </option>
+                </select>
+
+                <h1 class="text-[18px] font-medium text-blue-950 mt-10">
+                  How much additional space do you need?
+                </h1>
+                <p class="text-[14px] text-blue-950 mb-3">Ground Floor Space</p>
+                <div class="flex items-center gap-x-2">
+                  <button
+                    type="button"
+                    id="downCounter"
+                    class="min-w-[30px] h-[30px] rounded-full flex items-center justify-center text-gray-400 text-[15px] border border-gray-300"
+                  >
+                    -
+                  </button>
+                  <div
+                    class="flex items-center border border-gray-200 px-3 rounded-md h-10"
+                  >
+                    <input
+                      type="number"
+                      value="0"
+                      id="extentionsSquar"
+                      class="bg-transparent outline-none w-[80%] md:w-[80px]"
+                    />
+                    <span>m <sup>2</sup></span>
+                  </div>
+                  <button
+                    type="button"
+                    id="upCounter"
+                    class="min-w-[30px] h-[30px] rounded-full flex items-center justify-center text-gray-400 text-[15px] border border-gray-300"
+                  >
+                    +
+                  </button>
+                </div>
+                <h1 class="text-[18px] font-medium text-blue-950 mt-5 mb-3">
+                  Some extra information
+                </h1>
+                <input type="text" id="extraInfo" class="customeInput" />
+              </div>
+            </div>
+            <!--  -->
+            <div class="mt-4">
+              <label
+                for="conversion"
+                class="flex gap-x-5 items-center cursor-pointer mb-4 mt-3"
+              >
+                <div class="relative">
+                  <input
+                    id="conversion"
+                    type="checkbox"
+                    class="hidden extentiosToggler"
+                  />
+                  <div
+                    class="toggle__line w-12 h-5 bg-yellow-100 rounded-full shadow-inner"
+                  ></div>
+                  <div
+                    class="toggle__dot absolute w-5 h-5 bg-gray-200 rounded-full shadow inset-y-0 left-0"
+                  ></div>
+                </div>
+                <span>Loft Conversion</span>
+              </label>
+              <div id="conversionSettings" class="hidden">
+                <select name="" class="customeInput">
+                  <option value="Side Extension">Side Extension</option>
+                  <option value="Rear Extension">Rear Extension</option>
+                  <option value="Side + Rear Extension">
+                    Side + Rear Extension
+                  </option>
+                </select>
+
+                <h1 class="text-[18px] font-medium text-blue-950 mt-10">
+                  How much additional space do you need?
+                </h1>
+                <p class="text-[14px] text-blue-950 mb-3">Ground Floor Space</p>
+                <div class="flex items-center gap-x-2">
+                  <button
+                    type="button"
+                    id="downCounter"
+                    class="min-w-[30px] h-[30px] rounded-full flex items-center justify-center text-gray-400 text-[15px] border border-gray-300"
+                  >
+                    -
+                  </button>
+                  <div
+                    class="flex items-center border border-gray-200 px-3 rounded-md h-10"
+                  >
+                    <input
+                      type="number"
+                      value="0"
+                      id="extentionsSquar"
+                      class="bg-transparent outline-none w-[80%] md:w-[80px]"
+                    />
+                    <span>m <sup>2</sup></span>
+                  </div>
+                  <button
+                    type="button"
+                    id="upCounter"
+                    class="min-w-[30px] h-[30px] rounded-full flex items-center justify-center text-gray-400 text-[15px] border border-gray-300"
+                  >
+                    +
+                  </button>
+                </div>
+                <h1 class="text-[18px] font-medium text-blue-950 mt-5 mb-3">
+                  Some extra information
+                </h1>
+                <input type="text" id="extraInfo" class="customeInput" />
+              </div>
+            </div>
+
+            <h1 class="text-[20px] font-medium text-blue-950 mt-10">
+              What facilities will be in this extension?
+            </h1>
+            <p class="text-[14px] text-blue-950 mb-3">
+              Give us an idea of what you'd like to be added in this extension
+            </p>
+            <ul>
+              <li class="py-2">
+                <label
+                  for="Kitchen"
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="Kitchen"
+                    value="Kitchen"
+                  />
+                  <span>Kitchen</span>
+                </label>
+              </li>
+              <li class="py-2">
+                <label
+                  for="Toilet"
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="Toilet"
+                    value="Toilet"
+                  />
+                  <span>Toilet</span>
+                </label>
+              </li>
+              <li class="py-2">
+                <label
+                  for="Utility"
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="Utility"
+                    value="Utility"
+                  />
+                  <span>Utility</span>
+                </label>
+              </li>
+              <li class="py-2">
+                <label
+                  for="Bath/Shower "
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="Bath/Shower "
+                    value="Bath/Shower"
+                  />
+                  <span>Bath/Shower Room</span>
+                </label>
+              </li>
+              <li class="py-2 text-gray-400">Additional Services:</li>
+              <li class="py-2">
+                <label
+                  for="NewBoiler"
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="NewBoiler"
+                    value="NewBoiler"
+                  />
+                  <span>New Boiler</span>
+                </label>
+              </li>
+              <li class="py-2">
+                <label
+                  for="NewElectrics"
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="NewElectrics"
+                    value="NewElectrics"
+                  />
+                  <span>New Electrics</span>
+                </label>
+              </li>
+              <li class="py-2">
+                <label
+                  for="Underfloor"
+                  class="relative flex items-center gap-x-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    name="facilities"
+                    id="Underfloor"
+                    value="Underfloorheating"
+                  />
+                  <span>Underfloor heating</span>
+                </label>
+              </li>
+            </ul>
+
+            <h1 class="text-[20px] font-medium text-blue-950 mt-10 mb-3">
+              Some information
+            </h1>
+            <input
+              type="text"
+              name=""
+              class="customeInput"
+              placeholder="Provide us some extra details on what you'd like with your extension"
+            />
+            <h1 class="text-[20px] font-medium text-blue-950 mt-5 mb-3">
+              What are you planning to do internally?
+            </h1>
+            <textarea
+              name=""
+              class="customeInput h-auto"
+              placeholder="Provide us with some important information on what you'd like changed (Which rooms are being changed, walls to remove, .etc)"
+            ></textarea>
+          </div>
+
+          <!-- =========== -->
+          <h1 class="text-[20px] font-medium text-blue-950 mt-10">
+            How many bedrooms does this property have?
+          </h1>
+          <p class="text-[14px] text-blue-950 mb-3">
+            This will give us an idea of the property's size
+          </p>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"
+          >
+            <label
+              for="1"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >1</span
+              >
+              <input
+                type="radio"
+                name="idea"
+                id="1"
+                value="1"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="2"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >2</span
+              >
+              <input
+                type="radio"
+                name="idea"
+                id="2"
+                value="2"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="3"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >3</span
+              >
+              <input
+                type="radio"
+                name="idea"
+                id="3"
+                value="3"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="4"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >4</span
+              >
+              <input
+                type="radio"
+                name="idea"
+                id="4"
+                value="4"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="5"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >5+</span
+              >
+              <input
+                type="radio"
+                name="idea"
+                id="5"
+                value="5"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <!-- ============ -->
+          <h1 class="text-[20px] font-medium text-blue-950 mb-3 mt-10">
+            When are you hoping to start the design process?
+          </h1>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3"
+          >
+            <label
+              for="ASAP"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >ASAP</span
+              >
+              <input
+                type="radio"
+                name="hoping"
+                id="ASAP"
+                value="ASAP"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="3Months"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >3 Months</span
+              >
+              <input
+                type="radio"
+                name="hoping"
+                id="3Months"
+                value="3 M"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="6Months"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >6 Months</span
+              >
+              <input
+                type="radio"
+                name="hoping"
+                id="6Months"
+                value="6 M"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="12Months"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >12 Months</span
+              >
+              <input
+                type="radio"
+                name="hoping"
+                id="12Months"
+                value="12 M"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="notsure"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >I'm not sure</span
+              >
+              <input
+                type="radio"
+                name="hoping"
+                id="notsure"
+                value="notsure"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <!-- ============= -->
+          <h1 class="text-[20px] font-medium text-blue-950 mb-3 mt-10">
+            Are you interested in any of these services?
+          </h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label
+              for="Design"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Design and planning advice</span
+              >
+              <input
+                type="radio"
+                name="interested"
+                id="Design"
+                value="Design"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="financing"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Help with financing my build</span
+              >
+              <input
+                type="radio"
+                name="interested"
+                id="financing"
+                value="financing"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="findingBuilder"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Help finding a builder</span
+              >
+              <input
+                type="radio"
+                name="interested"
+                id="findingBuilder"
+                value="findingBuilder"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+
+            <label
+              for="professionals"
+              class="relative flex flex-col bg-white p-5 rounded-lg shadow-sm border border-gray-200 cursor-pointer"
+            >
+              <span class="font-semibold text-gray-500 leading-tight uppercase"
+                >Help finding other professionals</span
+              >
+              <input
+                type="radio"
+                name="interested"
+                id="professionals"
+                value="professionals"
+                class="absolute h-0 w-0 appearance-none"
+              />
+              <span
+                aria-hidden="true"
+                class="hidden absolute inset-0 border-2 border-yellow-400 bg-yellow-200 bg-opacity-10 rounded-lg"
+              >
+                <span
+                  class="absolute top-4 right-4 h-6 w-6 inline-flex items-center justify-center rounded-full bg-yellow-200"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="h-5 w-5 text-yellow-600"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <!-- ============ -->
+          <h1 class="text-[20px] font-medium text-blue-950 mb-3 mt-16">
+            A few details from you, please...
+          </h1>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label class="text-[15px] font-normal mb-1 text-gray-400"
+                >First Name*</label
+              >
+              <input
+                type="text"
+                name=""
+                class="customeInput"
+                placeholder="Mick"
+              />
+            </div>
+            <div>
+              <label class="text-[15px] font-normal mb-1 text-gray-400"
+                >Last Name*</label
+              >
+              <input
+                type="text"
+                name=""
+                class="customeInput"
+                placeholder="Huckanall"
+              />
+            </div>
+            <div>
+              <label class="text-[15px] font-normal mb-1 text-gray-400"
+                >First line of project address*</label
+              >
+              <input
+                type="text"
+                name=""
+                class="customeInput"
+                placeholder="Holding back"
+              />
+            </div>
+            <div>
+              <label class="text-[15px] font-normal mb-1 text-gray-400"
+                >Project postcode*</label
+              >
+              <input
+                type="text"
+                name=""
+                class="customeInput"
+                placeholder="SWA1"
+              />
+            </div>
+            <div>
+              <label class="text-[15px] font-normal mb-1 text-gray-400"
+                >Email*</label
+              >
+              <input
+                type="email"
+                name=""
+                class="customeInput"
+                placeholder="demo@gmail.com"
+              />
+            </div>
+            <div>
+              <label class="text-[15px] font-normal mb-1 text-gray-400"
+                >Phone*</label
+              >
+              <input
+                type="email"
+                name=""
+                class="customeInput"
+                placeholder="78645438"
+              />
+            </div>
+          </div>
+          <div class="flex items-center justify-center mt-10">
+            <button
+              id="submit"
+              class="bg-yellow-400 py-3 px-4 rounded-full text-[16px] border-2 border-yellow-400 duration-300 hover:bg-yellow-50 hover:text-yellow-400"
+            >
+              Reveal my quick quote
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <!-- calculator end -->
+
+    <!-- js -->
+    <script type="module" src="./src/app.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
